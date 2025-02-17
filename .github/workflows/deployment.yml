@@ -37,7 +37,7 @@ jobs:
       - name:
         run: |
           echo "lets check the github object"
-          echo ${{ github }}
+          echo ${{ toJson(github) }}
 
   # install_poetry:
   #   runs-on: ubuntu-latest
