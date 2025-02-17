@@ -34,6 +34,11 @@ jobs:
         run: |
           echo "${{ needs.job1.outputs.message }}"
 
+      - name:
+        run: |
+          echo "lets check the github object"
+          echo ${{ github }}
+
   # install_poetry:
   #   runs-on: ubuntu-latest
   #   steps:
