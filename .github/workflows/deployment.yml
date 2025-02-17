@@ -34,10 +34,10 @@ jobs:
         run: |
           echo "${{ needs.job1.outputs.message }}"
 
-      - name:
+      - name: echo github object
         run: |
           echo "lets check the github object"
-          echo ${{ fromJson(github) }}
+          echo '${{ toJSON(github) }}' | jq
 
   # install_poetry:
   #   runs-on: ubuntu-latest
